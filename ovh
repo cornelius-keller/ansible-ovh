@@ -86,7 +86,7 @@ def main():
     if module.params['args'] == {}:
        res =  method(module.params['uri']) # module.params['args'])
     else:
-       res =  method(module.params['uri'], module.params['args'])
+       res =  method(module.params['uri'], **module.params['args'])
 
     module.exit_json(changed=True, result=res)
 
