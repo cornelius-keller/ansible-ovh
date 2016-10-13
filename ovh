@@ -73,7 +73,7 @@ module = AnsibleModule(
         consumer_key = dict(required=True),
         method = dict(required=True, choices=['get','put','post','delete']),
         uri = dict(required=True),
-        args = dict(default={})
+        args = dict(default={}, type='dict')
     )
 )
 
